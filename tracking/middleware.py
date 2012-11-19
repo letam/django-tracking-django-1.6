@@ -94,6 +94,10 @@ class VisitorTrackingMiddleware(object):
         # if we get here, the URL needs to be tracked
         # determine what time it is
         now = datetime.now()
+        if getattr(settings, 'USE_TZ', False):
+            import pytz
+            tz = pytz.timezone(settings.TIME_ZONE)
+            now = tz.localize(now)
 
         attrs = {
             'session_key': session_key,
