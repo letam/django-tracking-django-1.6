@@ -2,10 +2,7 @@ from datetime import datetime, timedelta
 import logging
 import traceback
 
-from django.contrib.gis.utils import HAS_GEOIP
-
-if HAS_GEOIP:
-    from django.contrib.gis.utils import GeoIP, GeoIPException
+from django.contrib.gis.geoip import GeoIP, GeoIPException
 
 from django.conf import settings
 try:
