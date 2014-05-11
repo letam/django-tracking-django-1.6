@@ -8,7 +8,10 @@ if HAS_GEOIP:
     from django.contrib.gis.utils import GeoIP, GeoIPException
 
 from django.conf import settings
-from django.contrib.auth.models import User
+try:
+    User = settings.AUTH_USER_MODEL
+except AttributeError:
+    from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import ugettext, ugettext_lazy as _
 from tracking import utils
