@@ -1,8 +1,10 @@
 ``django-tracking`` is a simple attempt at keeping track of visitors to
 Django-powered Web sites.  It also offers basic blacklisting capabilities.
 
-The offial repository for ``django-tracking`` is at
-http://bitbucket.org/codekoala/django-tracking.  Please file any tickets there.
+The original repository for ``django-tracking`` is at
+http://bitbucket.org/codekoala/django-tracking.
+
+As the original author is no longer able to maintain the project, this repository is an attempt to contain the latest fixes and improvements made by everyone else in the community.
 
 Features
 ========
